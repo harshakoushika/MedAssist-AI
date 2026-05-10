@@ -82,10 +82,145 @@ Make sure you have the following installed:
 ## 1️⃣ Clone the Repository
 
 Open terminal or command prompt and run:
-```bash
-git clone https://github.com/your-username/MedAssist-AI.git
-cd MedAssist-AI
 
 ```bash
 git clone https://github.com/your-username/MedAssist-AI.git
 cd MedAssist-AI
+```
+
+---
+
+## 2️⃣ Create a Virtual Environment
+
+### For Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### For Mac/Linux
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+## 3️⃣ Install Required Dependencies
+
+Install all the required Python packages using:
+
+```bash
+pip install -r requirements.txt
+```
+
+If the project does not contain a `requirements.txt` file, install the packages manually:
+
+```bash
+pip install flask pandas numpy scikit-learn nltk
+```
+
+---
+
+## 4️⃣ Run the Application
+
+Start the Flask application using:
+
+```bash
+python app.py
+```
+
+OR
+
+```bash
+python main.py
+```
+
+---
+
+## 5️⃣ Open in Browser
+
+After running the application, open your browser and visit:
+
+```text
+http://localhost:5000
+```
+
+The AI Healthcare Chatbot will now be running locally on your system 🎉
+
+---
+
+# 📂 Project Structure
+
+```text
+MedAssist-AI/
+│
+├── dataset/
+├── static/
+├── templates/
+├── model/
+├── app.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# 📈 Future Improvements
+
+- 🎤 Voice assistant integration
+- 🌍 Multi-language support
+- 📱 Mobile responsive design
+- 🧾 Medical report analysis
+- ☁️ Cloud deployment
+- 🔐 User authentication system
+- 🧠 Advanced deep learning models
+- 📊 Health analytics dashboard
+
+---
+
+# 🤝 Contribution
+
+Contributions are always welcome!
+
+If you'd like to improve this project:
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push the branch
+5. Open a Pull Request
+
+---
+
+# ⚠️ Disclaimer
+
+This project is developed for educational and research purposes only.
+
+The chatbot does not replace professional medical advice, diagnosis, or treatment.
+
+Always consult a qualified healthcare professional for serious medical concerns.
+
+---
+
+# 🙌 Acknowledgements
+
+- Open-source healthcare datasets
+- Flask community
+- Scikit-learn documentation
+- Python open-source ecosystem
+
+---
+
+# 📧 Contact
+
+### Harsha Koushika  
+📍 Data Science Student  
+
+🔗 GitHub: https://github.com/your-username
+
+---
+
+⭐ If you like this project, consider giving it a star!
