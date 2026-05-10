@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedAssist AI</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #0f172a, #1e293b, #0f766e);
+        color: white;
+      }
+
+      .container {
+        width: 450px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 1s ease;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 32px;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #d1d5db;
+        margin-bottom: 25px;
+      }
+
+      input {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 10px;
+        background: #14b8a6;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #0f766e;
+        transform: scale(1.02);
+      }
+
+      .chatbox {
+        margin-top: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        border-radius: 10px;
+        min-height: 120px;
+      }
+
+      .user {
+        color: #7dd3fc;
+        margin-bottom: 10px;
+      }
+
+      .bot {
+        color: #86efac;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>🩺 MedAssist AI</h1>
+
+      <p class="subtitle">Your Intelligent Healthcare Assistant</p>
+
+      <form method="POST" action="/chat">
+        <input
+          type="text"
+          name="message"
+          placeholder="Describe your symptoms..."
+          required
+        />
+
+        <button type="submit">Analyze Symptoms</button>
+      </form>
+
+      <div class="chatbox">
+        {% if user_message %}
+        <p class="user"><strong>You:</strong> {{ user_message }}</p>
+        {% endif %} {% if bot_response %}
+        <p class="bot"><strong>MedAssist AI:</strong> {{ bot_response }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
